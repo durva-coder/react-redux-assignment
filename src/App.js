@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Cart from "./components/cart/Cart";
+import Navbar from "./components/navbar/Navbar";
+import AllProducts from "./components/product/AllProducts";
+import { useSelector } from "react-redux";
 
 function App() {
+  const showCart = useSelector((state) => state.ui.cartIsVisible);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+        <Navbar />
+        {showCart && <Cart />}
+        <AllProducts />
+      </>
     </div>
   );
 }
