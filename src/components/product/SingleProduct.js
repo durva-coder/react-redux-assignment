@@ -19,8 +19,8 @@ function SingleProduct(props) {
     <div className="card w-50 mx-auto mb-3">
       <div className="card-body">
         <header className="float-start">
-          <h3>{props.title}</h3>
-          <p className="card-text">{props.description}</p>
+          <h3 className="text-start">{props.title}</h3>
+          <p className="card-text text-start">{props.description}</p>
         </header>
         <div className="float-end">
           <h4>
