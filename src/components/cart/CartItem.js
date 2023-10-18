@@ -23,7 +23,7 @@ function CartItem(props) {
   return (
     <div className="card w-75 h-50 mx-auto margin-auto mb-3">
       <div className="card-body">
-        <header className="float-start">
+        <header className="float-start text-start">
           <h3>{props.item.title}</h3>
           <div className="float-start">
             x <span>{props.item.quantity}</span>
@@ -37,7 +37,7 @@ function CartItem(props) {
             <span>(${props.item.price} / item)</span>
           </div>
 
-          <div>
+          <div className="text-end">
             <button className="btn btn-danger me-3" onClick={removeItemToCart}>
               -
             </button>
