@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
+import classes from "./CartItem.module.css";
 
 function CartItem(props) {
   const dispatch = useDispatch();
@@ -24,14 +25,16 @@ function CartItem(props) {
       <div className="card-body">
         <header className="float-start">
           <h3>{props.item.title}</h3>
-          <div>
+          <div className="float-start">
             x <span>{props.item.quantity}</span>
           </div>
         </header>
         <div className="float-end">
-          <div>
-            ${props.item.total}
-            <span>(${props.item.price})</span>
+          <div className="float-center">
+            <strong className={classes.price}>
+              ${props.item.total} &nbsp;
+            </strong>
+            <span>(${props.item.price} / item)</span>
           </div>
 
           <div>

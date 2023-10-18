@@ -21,7 +21,9 @@ function Navbar() {
             onClick={toggleHandler}
           >
             <span className="me-1">My Cart</span>
-            <span className="badge bg-info text-dark">{quantity}</span>
+            <span className="badge rounded-pill bg-info text-dark">
+              {quantity}
+            </span>
           </button>
         </div>
       </nav>

@@ -23,9 +23,14 @@ function SingleProduct(props) {
           <p className="card-text">{props.description}</p>
         </header>
         <div className="float-end">
-          <div>${props.price}</div>
+          <h4>
+            <div className="badge rounded-pill bg-primary">${props.price}</div>
+          </h4>
           <div>
-            <button className="mt-5 btn btn-primary" onClick={addItemHandler}>
+            <button
+              className="mt-5 btn btn-outline-primary"
+              onClick={addItemHandler}
+            >
               Add to Cart
             </button>
           </div>
